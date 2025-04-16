@@ -14,6 +14,6 @@ def test_status_code():
 
 
 def test_name_my_trainer():
-    my_treainer_name = requests.get(url=f"{URL}/trainers", headers=HEADER, params=QUARY_PARAMS)
-    trainer_name = my_treainer_name.json()["data"][0]["trainer_name"]
+    my_trainer_name = requests.get(url=f"{URL}/trainers", headers=HEADER, params=QUARY_PARAMS)
+    trainer_name = my_trainer_name.json()["data"][0]["trainer_name"]
     assert trainer_name == "Python"

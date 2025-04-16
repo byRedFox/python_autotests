@@ -1,5 +1,8 @@
+# Что бы установить все что нужно -- pip install -r requirements-dev.txt
+
 flake8
 black
 isort
 pytest
 pre-commit
+python-dotenv

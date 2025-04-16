@@ -1,7 +1,13 @@
-import requests
+import os
 
-URL = "https://api.pokemonbattle.ru/v2"
-TOKEN = "b5e3ff0891f8ebbfd981d4460723c984"
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TOKEN = os.getenv("TOKEN")
+URL = os.getenv("URL")
+
 HEADER = {"Content-Type": "application/json", "trainer_token": TOKEN}
 request_body = {"name": "generate", "photo_id": -1}
 request_body_for_change_name = {"pokemon_id": "287015", "name": "finik", "photo_id": 391}
